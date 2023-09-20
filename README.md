@@ -19,3 +19,4 @@
 
 # TODO
 1. Investigate to see if the evaulate() function can be refactored into more concise code.
+2. Ensure program requirements and control flow meet outlined standards.
