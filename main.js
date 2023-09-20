@@ -1,5 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
+let drawRounds = 0;
 let playerSelection = 0;
 let computerSelection = 0;
 
@@ -10,6 +11,12 @@ while (controlVar < 5) {
     play();
     controlVar++;
 }
+
+//Reports final results
+console.log("=====Series Results=====\n" +
+"Roudns Won by Player = " + playerScore + "\n" + 
+"Rounds Won by the Computer = " + computerScore + "\n" + 
+"Draw Rounds = " + drawRounds);
 
 //Calls required functions to get computer selection & player selection & stores returned values
 //Returned values are then sent to be evaluated
@@ -38,39 +45,46 @@ function evaluate(playerSelection, computerSelection) {
         case 1:
             if(computerSelection==2) {
                 //player win
+                playerScore++;
             }
             else if(computerSelection==3) {
                 //computer win
+                computerScore++;
             }
             else {
                 //draw
+                drawRounds++;
             }
             break;
         case 2:
             if(computerSelection==3) {
                 //player win
+                playerScore++;
             }
             else if(computerSelection==1) {
                 //computer win
+                computerScore++;
             }
             else {
                 //draw
+                drawRounds++;
             }
             break;
         case 3:
             if(computerSelection==1) {
                 //player win
+                playerScore++;
             }
             else if(computerSelection==2) {
                 //computer win
+                computerScore++;
             }
             else {
                 //draw
+                drawRounds++;
             }
             break;
         default:
             console.log("Something has gone wrong in the switch statement.")
     }
-
-    console.log("The player selected: " + playerSelection + " The computer selected: "+ computerSelection);
 }
