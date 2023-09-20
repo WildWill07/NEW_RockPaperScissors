@@ -19,16 +19,17 @@ console.log("=====Series Results=====\n" +
 "Draw Rounds = " + drawRounds);
 
 //Calls required functions to get computer selection & player selection & stores returned values
+//Converts string return type of playerSelection into an int
 //Returned values are then sent to be evaluated
 function play() {
-    playerSelection = getPlayerSelection();
+    playerSelection = parseInt(getPlayerSelection());
     computerSelection = getComputerSelection();
     evaluate(playerSelection, computerSelection)
 }
 
 //Promots user for input and returns it play()
 function getPlayerSelection() {
-    return prompt("Please enter the corresponding integer to your selection:\
+    return  prompt("Please enter the corresponding integer to your selection:\
     1 - Rock\
     2 - Scissors\
     3 - Paper");
